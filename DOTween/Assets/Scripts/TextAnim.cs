@@ -5,21 +5,23 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Text))]
 public class TextAnim : MonoBehaviour
 {
-    [SerializeField] private string _endText;
-    [SerializeField] private float _speed;
-    [SerializeField] private bool richTextEnabled;
-    [SerializeField] private ScrambleMode scrambleMode;
-    [SerializeField] private string scrambleChars;
+    [SerializeField] private string _textOne;
+    [SerializeField] private string _textTwo;
+    [SerializeField] private string _textThree;
 
+    private Sequence _sequence;
     private Text _text;
 
     private void Awake()
     {
+        _sequence = DOTween.Sequence().SetLoops(-1);
         _text = GetComponent<Text>();
     }
 
     private void Start()
     {
-        _text.DOText(_endText, _speed, richTextEnabled, scrambleMode, scrambleChars).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InBounce);
+        _sequence.Append(_text.DOText(_textOne, 1, true, ScrambleMode.None, "W"));
+        _sequence.Append(_text.DOText(_textTwo, 3, false, ScrambleMode.Lowercase, "F"));
+        _sequence.Append(_text.DOText(_textThree, 5, true, ScrambleMode.Numerals, "A"));
     }
 }

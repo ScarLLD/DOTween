@@ -293,11 +293,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52cc33e05574291469156afb7cb71a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _endText: WaterFire
-  _speed: 1
-  richTextEnabled: 1
-  scrambleMode: 2
-  scrambleChars: r
+  _textOne: first
+  _textTwo: second
+  _textThree: third
 --- !u!114 &455473785
 MonoBehaviour:
   m_ObjectHideFlags: 0
