@@ -9,6 +9,5 @@ public class ScaleAnim : MonoBehaviour
     private void Start()
     {
         transform.DOScale(_endValue, 1).SetLoops(-1, LoopType.Yoyo);
-
     }
 }

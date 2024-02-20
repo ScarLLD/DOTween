@@ -8,7 +8,6 @@ public class RotateAnim : MonoBehaviour
 
     private void Start()
     {
-        transform.DORotate(_endValue, _speed, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Restart);
-        
+        transform.DORotate(_endValue, _speed, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Restart);        
     }
 }

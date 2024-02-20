@@ -2,6 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Image))]
 public class ColorAnim : MonoBehaviour
 {
     [SerializeField] private Color _endColor;
